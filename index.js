@@ -26,6 +26,9 @@ var nl = new Buffer('\n');
  */
 
 module.exports = function appendBuffer(buf, suffix) {
+  if (!suffix || !suffix.length) {
+    return buf;
+  }
   var eol;
   if (equals(buf.slice(-2), cr)) {
     eol = cr;
