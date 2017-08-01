@@ -24,9 +24,23 @@
     "buffer"
   ],
   "devDependencies": {
+    "gulp-format-md": "^1.0.0",
     "mocha": "^3.5.0"
   },
   "dependencies": {
     "buffer-equal": "^1.0.0"
+  },
+  "verb": {
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "lint": {
+      "reflinks": true
+    }
   }
 }
