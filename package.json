@@ -1,0 +1,27 @@
+{
+  "name": "append-buffer",
+  "description": "Append a buffer to another buffer ensuring to preserve line ending characters.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/doowb/append-buffer",
+  "author": "Brian Woodward (https://doowb.com)",
+  "repository": "doowb/append-buffer",
+  "bugs": {
+    "url": "https://github.com/doowb/append-buffer/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "LICENSE"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "append",
+    "buffer"
+  ]
+}
