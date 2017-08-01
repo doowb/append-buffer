@@ -22,5 +22,11 @@
   "keywords": [
     "append",
     "buffer"
-  ]
+  ],
+  "devDependencies": {
+    "mocha": "^3.5.0"
+  },
+  "dependencies": {
+    "buffer-equal": "^1.0.0"
+  }
 }
