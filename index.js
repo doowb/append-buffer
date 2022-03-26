@@ -6,7 +6,7 @@ var equals = require('buffer-equal');
 var createBuffer = function(src) {
   try {
     return Buffer.from(src)
-  } catch {
+  } catch (err) {
     return new Buffer(src)
   }
 }
