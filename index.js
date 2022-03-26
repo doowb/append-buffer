@@ -2,8 +2,18 @@
 
 var os = require('os');
 var equals = require('buffer-equal');
-var cr = Buffer.from('\r\n');
-var nl = Buffer.from('\n');
+
+var createBuffer = function(src) {
+  try {
+    return Buffer.from(src)
+  } catch {
+    return new Buffer(src)
+  }
+}
+
+var cr = createBuffer('\r\n');
+var nl = createBuffer('\n');
+
 
 /**
  * Append a buffer to another buffer ensuring to preserve line ending characters.
@@ -35,7 +45,7 @@ module.exports = function appendBuffer(buf, suffix) {
   } else if (equals(buf.slice(-1), nl)) {
     eol = nl;
   } else {
-    return Buffer.concat([buf, Buffer.from(os.EOL), Buffer.from(suffix)]);
+    return Buffer.concat([buf, createBuffer(os.EOL), createBuffer(suffix)]);
   }
-  return Buffer.concat([buf, Buffer.from(suffix), eol]);
+  return Buffer.concat([buf, createBuffer(suffix), eol]);
 };
