@@ -37,14 +37,14 @@ Append a buffer to another buffer ensuring to preserve line ending characters.
 **Example**
 
 ```js
-console.log([appendBuffer(new Buffer('abc\r\n'), new Buffer('def')).toString()]);
+console.log([appendBuffer(Buffer.from('abc\r\n'), Buffer.from('def')).toString()]);
 //=> [ 'abc\r\ndef\r\n' ]
 
-console.log([appendBuffer(new Buffer('abc\n'), new Buffer('def')).toString()]);
+console.log([appendBuffer(Buffer.from('abc\n'), Buffer.from('def')).toString()]);
 //=> [ 'abc\ndef\n' ]
 
 // uses os.EOL when a line ending is not found
-console.log([appendBuffer(new Buffer('abc'), new Buffer('def')).toString()]);
+console.log([appendBuffer(Buffer.from('abc'), Buffer.from('def')).toString()]);
 //=> [ 'abc\ndef' ]
 ```
 
